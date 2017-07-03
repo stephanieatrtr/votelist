@@ -1,8 +1,8 @@
 import React from 'react';
 import SpotifyWebApi from 'spotify-web-api-node';
-import Modal from 'react-modal';
 import s from './PlaylistLogin.css';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import moment from 'moment';
 
 const CLIENT_ID = 'b8ae36286f1c4db28a8a2ba380a4d8cc';
 const CLIENT_SECRET = '18cfc75e9f4b4785ac325eaa38a095c9';
@@ -43,6 +43,7 @@ class PlaylistLogin extends React.Component {
     this.setState({ auth });
     if(!localStorage.authToken) {
       localStorage.setItem('authToken', JSON.stringify(auth));
+      localStorage.setItem('authTime', moment().format());
     }
     this.getSpotify(auth.access_token);
 

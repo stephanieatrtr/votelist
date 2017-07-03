@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import PlaylistLogin from './PlaylistLogin';
-import a from 'axios';
 
 
 async function action() {

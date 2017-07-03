@@ -2,11 +2,11 @@
   "playlist-login": {
     "js": "/assets/playlist-login.chunk.js"
   },
-  "playlist": {
-    "js": "/assets/playlist.chunk.js"
-  },
   "privacy": {
     "js": "/assets/privacy.chunk.js"
+  },
+  "playlist": {
+    "js": "/assets/playlist.chunk.js"
   },
   "not-found": {
     "js": "/assets/not-found.chunk.js"
