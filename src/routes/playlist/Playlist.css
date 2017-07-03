@@ -1,0 +1,29 @@
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 1em 0;
+}
+.cell {
+  padding: 0 1em;
+}
+
+.track {
+  min-width: 30%;
+}
+.artist {
+  min-width: 20%;
+}
+.addedBy {
+  min-width: 20%;
+}
+
+.even {
+}
+.odd {
+  background: #92e5fc;
+}

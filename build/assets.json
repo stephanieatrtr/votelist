@@ -1,0 +1,20 @@
+{
+  "playlist-login": {
+    "js": "/assets/playlist-login.chunk.js"
+  },
+  "playlist": {
+    "js": "/assets/playlist.chunk.js"
+  },
+  "privacy": {
+    "js": "/assets/privacy.chunk.js"
+  },
+  "not-found": {
+    "js": "/assets/not-found.chunk.js"
+  },
+  "client": {
+    "js": "/assets/client.js"
+  },
+  "vendor": {
+    "js": "/assets/vendor.js"
+  }
+}
