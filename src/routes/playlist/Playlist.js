@@ -4,10 +4,7 @@ import s from './Playlist.css';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import moment from 'moment';
-
-const CLIENT_ID = 'b8ae36286f1c4db28a8a2ba380a4d8cc';
-const CLIENT_SECRET = '18cfc75e9f4b4785ac325eaa38a095c9';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+import { CLIENT_ID, CLIENT_SECRET, REDIRECT_URI } from '../../constants';
 
 class Playlist extends React.Component {
   getSpotify(token){
@@ -38,6 +35,7 @@ class Playlist extends React.Component {
 
     if(moment().diff(moment(localStorage.authTime), 'minutes') > 2) {
       localStorage.removeItem('authToken');
+      return;
     }
 
     this.getSpotify(JSON.parse(localStorage.authToken).access_token);

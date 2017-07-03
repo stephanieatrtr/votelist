@@ -4,9 +4,7 @@ import s from './PlaylistLogin.css';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import moment from 'moment';
 
-const CLIENT_ID = 'b8ae36286f1c4db28a8a2ba380a4d8cc';
-const CLIENT_SECRET = '18cfc75e9f4b4785ac325eaa38a095c9';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+import { CLIENT_ID, CLIENT_SECRET, REDIRECT_URI } from '../../constants';
 
 class PlaylistLogin extends React.Component {
   getKeys(hash) {
@@ -54,7 +52,7 @@ class PlaylistLogin extends React.Component {
     if(!user) return null;
 
     return (
-      <div>
+      <div className={s.base}>
         <div className={s.children}>
           <img src={user.images[0].url}/>
           <div>Welcome {user.display_name}!</div>
